@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.7 on win32)" generated="20210820 17:14:25.849" rpa="false">
+<suite id="s1" name="TC01 Register dengan locator &amp; TC02 login">
+<suite id="s1-s1" name="TC01 Register dengan locator" source="C:\robot\Arena\TC01_Register_dengan_locator.robot">
+<test id="s1-s1-t1" name="register">
+<kw name="define apps" library="sbs">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>alias=Sebangsa</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>autoGrantPermissions=${autoGrantPermissions}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:14:26.223" endtime="20210820 17:14:52.490"></status>
+</kw>
+<status status="PASS" starttime="20210820 17:14:26.223" endtime="20210820 17:14:52.490"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${navigasi_akun}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:14:52.491" endtime="20210820 17:14:53.696"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${navigasi_akun}</arg>
+</arguments>
+<msg timestamp="20210820 17:14:53.705" level="INFO">Clicking element 'id=com.sebangsa.arena:id/navigation_account'.</msg>
+<status status="PASS" starttime="20210820 17:14:53.697" endtime="20210820 17:14:54.201"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${btn_register}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:14:54.202" endtime="20210820 17:14:55.391"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_register}</arg>
+</arguments>
+<msg timestamp="20210820 17:14:55.399" level="INFO">Clicking element 'id=com.sebangsa.arena:id/btn_register'.</msg>
+<status status="PASS" starttime="20210820 17:14:55.392" endtime="20210820 17:14:55.671"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:14:55.672" endtime="20210820 17:14:56.843"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20210820 17:14:56.847" level="INFO">${username} = QgqppjSjHR</msg>
+<status status="PASS" starttime="20210820 17:14:56.845" endtime="20210820 17:14:56.847"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20210820 17:14:56.850" level="INFO">${email} = gSawiJqBNw</msg>
+<status status="PASS" starttime="20210820 17:14:56.849" endtime="20210820 17:14:56.850"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210820 17:14:56.854" level="INFO">${username} = QgqppjSjHR</msg>
+<status status="PASS" starttime="20210820 17:14:56.851" endtime="20210820 17:14:56.854"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210820 17:14:56.874" level="INFO">Typing text 'QgqppjSjHR' into text field 'id=com.sebangsa.arena:id/username'</msg>
+<status status="PASS" starttime="20210820 17:14:56.859" endtime="20210820 17:14:57.938"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_email}</arg>
+<arg>${email}@mailinator.com</arg>
+</arguments>
+<msg timestamp="20210820 17:14:57.956" level="INFO">Typing text 'gSawiJqBNw@mailinator.com' into text field 'id=com.sebangsa.arena:id/email'</msg>
+<status status="PASS" starttime="20210820 17:14:57.941" endtime="20210820 17:14:59.538"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>123456qwe</arg>
+</arguments>
+<msg timestamp="20210820 17:14:59.542" level="INFO">Typing text '123456qwe' into text field 'id=com.sebangsa.arena:id/password'</msg>
+<status status="PASS" starttime="20210820 17:14:59.539" endtime="20210820 17:15:01.435"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_register_form}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:01.444" level="INFO">Clicking element 'id=com.sebangsa.arena:id/button_register'.</msg>
+<status status="PASS" starttime="20210820 17:15:01.436" endtime="20210820 17:15:02.120"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${btn_konfirm_yes}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:15:02.121" endtime="20210820 17:15:03.384"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_konfirm_yes}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:03.393" level="INFO">Clicking element 'id=com.sebangsa.arena:id/action_positif'.</msg>
+<status status="PASS" starttime="20210820 17:15:03.385" endtime="20210820 17:15:03.583"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${btn_pilih_gender}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:15:03.584" endtime="20210820 17:15:06.244"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_pilih_gender}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:06.252" level="INFO">Clicking element 'id=com.sebangsa.arena:id/gender'.</msg>
+<status status="PASS" starttime="20210820 17:15:06.245" endtime="20210820 17:15:06.426"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${btn_pilih_male}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:12.020" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="1776"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1776]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.sebangsa.arena" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1776]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,1776]" displayed="true"&gt;
+        &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" resource-id="com.sebangsa.arena:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,1776]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,1776]" displayed="true"&gt;
+            &lt;android.widget.RelativeLayout index="0" package="com.sebangsa.arena" class="android.widget.RelativeLayout" text="" resource-id="com.sebangsa.arena:id/container_layout" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="true" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,1776]" displayed="true"&gt;
+              &lt;android.widget.LinearLayout index="0" package="com.sebangsa.arena" class="android.widget.LinearLayout" text="" resource-id="com.sebangsa.arena:id/app_bar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,240]" displayed="true"&gt;
+                &lt;android.view.ViewGroup index="0" package="com.sebangsa.arena" class="android.view.ViewGroup" text="" resource-id="com.sebangsa.arena:id/toolbar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,240]" displayed="true"&gt;
+                  &lt;android.widget.TextView index="0" package="com.sebangsa.arena" class="android.widget.TextView" text="Complete Profile" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,115][495,196]" displayed="true" /&gt;
+                  &lt;androidx.appcompat.widget.LinearLayoutCompat index="1" package="com.sebangsa.arena" class="androidx.appcompat.widget.LinearLayoutCompat" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[916,72][1080,240]" displayed="true"&gt;
+                    &lt;android.widget.TextView index="0" package="com.sebangsa.arena" class="android.widget.TextView" text="Save" resource-id="com.sebangsa.arena:id/action_save" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[916,84][1080,228]" displayed="true" /&gt;
+                  &lt;/androidx.appcompat.widget.LinearLayoutCompat&gt;
+                &lt;/android.view.ViewGroup&gt;
+              &lt;/android.widget.LinearLayout&gt;
+              &lt;android.widget.ScrollView index="1" package="com.sebangsa.arena" class="android.widget.ScrollView" text="" resource-id="com.sebangsa.arena:id/main_content" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,240][1080,1776]" displayed="true"&gt;
+                &lt;android.widget.LinearLayout index="0" package="com.sebangsa.arena" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,240][1080,1776]" displayed="true"&gt;
+                  &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" resource-id="com.sebangsa.arena:id/container_avatar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,288][588,828]" displayed="true"&gt;
+                    &lt;android.widget.ImageView index="0" package="com.sebangsa.arena" class="android.widget.ImageView" text="" resource-id="com.sebangsa.arena:id/img_avatar" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,288][588,828]" displayed="true" /&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                  &lt;android.widget.LinearLayout index="1" package="com.sebangsa.arena" class="android.widget.LinearLayout" text="" resource-id="com.sebangsa.arena:id/input_layout_username" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,888][1032,1049]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,921][1032,1049]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.sebangsa.arena" class="android.widget.EditText" text="QgqppjSjHR" resource-id="com.sebangsa.arena:id/username" checkable="false" checked="false" clickable="true" enabled="false" focusable="false" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[48,921][1032,1049]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="2" package="com.sebangsa.arena" class="android.widget.LinearLayout" text="" resource-id="com.sebangsa.arena:id/input_layout_name" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1073][1032,1234]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1106][1032,1234]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.sebangsa.arena" class="android.widget.EditText" text="Name" resource-id="com.sebangsa.arena:id/name" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[48,1106][1032,1234]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="3" package="com.sebangsa.arena" class="android.widget.LinearLayout" text="" resource-id="com.sebangsa.arena:id/input_layout_gender" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1258][1032,1435]" displayed="true"&gt;
+                    &lt;android.widget.TextView index="1" package="com.sebangsa.arena" class="android.widget.TextView" text="Gender" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[57,1258][1032,1307]" displayed="true" /&gt;
+                    &lt;android.widget.Spinner index="2" package="com.sebangsa.arena" class="android.widget.Spinner" text="" resource-id="com.sebangsa.arena:id/gender" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="true" selected="false" bounds="[48,1307][1032,1435]" displayed="true"&gt;
+                      &lt;android.widget.TextView index="0" package="com.sebangsa.arena" class="android.widget.TextView" text="Prefer not to say" resource-id="android:id/text1" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[60,1337][888,1402]" displayed="true" /&gt;
+                    &lt;/android.widget.Spinner&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="4" package="com.sebangsa.arena" class="android.widget.LinearLayout" text="" resource-id="com.sebangsa.arena:id/input_layout_birth_year" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1459][1032,1620]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1492][1032,1620]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.sebangsa.arena" class="android.widget.EditText" text="Birthyear" resource-id="com.sebangsa.arena:id/birth_year" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[48,1492][1032,1620]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="5" package="com.sebangsa.arena" class="android.widget.LinearLayout" text="" resource-id="com.sebangsa.arena:id/input_layout_bio" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1644][1032,1776]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.sebangsa.arena" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,1677][1032,1776]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.sebangsa.arena" class="android.widget.EditText" text="Bio" resource-id="com.sebangsa.arena:id/bio" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[48,1677][1032,1776]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                &lt;/android.widget.LinearLayout&gt;
+              &lt;/android.widget.ScrollView&gt;
+            &lt;/android.widget.RelativeLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.FrameLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210820 17:15:12.407" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210820 17:15:12.021" endtime="20210820 17:15:12.407"></status>
+</kw>
+<msg timestamp="20210820 17:15:12.408" level="FAIL">Element locator 'xpath=//android.widget.CheckedTextView[@text='Male']' did not match any elements after 5 seconds</msg>
+<status status="FAIL" starttime="20210820 17:15:06.427" endtime="20210820 17:15:12.408"></status>
+</kw>
+<status status="FAIL" starttime="20210820 17:14:26.222" endtime="20210820 17:15:12.409" critical="yes">Element locator 'xpath=//android.widget.CheckedTextView[@text='Male']' did not match any elements after 5 seconds</status>
+</test>
+<status status="FAIL" starttime="20210820 17:14:25.895" endtime="20210820 17:15:12.411"></status>
+</suite>
+<suite id="s1-s2" name="TC02 login" source="C:\robot\Arena\TC02_login.robot">
+<test id="s1-s2-t1" name="login">
+<kw name="define apps" library="sbs">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>alias=Sebangsa</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>autoGrantPermissions=${autoGrantPermissions}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:15:12.428" endtime="20210820 17:15:39.118"></status>
+</kw>
+<status status="PASS" starttime="20210820 17:15:12.428" endtime="20210820 17:15:39.118"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${navigasi_akun}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:15:39.119" endtime="20210820 17:15:39.717"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${navigasi_akun}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:39.721" level="INFO">Clicking element 'id=com.sebangsa.arena:id/navigation_account'.</msg>
+<status status="PASS" starttime="20210820 17:15:39.717" endtime="20210820 17:15:41.631"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:41.637" level="INFO">Clicking element 'id=com.sebangsa.arena:id/btn_login'.</msg>
+<status status="PASS" starttime="20210820 17:15:41.632" endtime="20210820 17:15:41.968"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${txt_input_username}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:15:41.969" endtime="20210820 17:15:43.148"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_input_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:43.153" level="INFO">Typing text 'QgqppjSjHR' into text field 'id=com.sebangsa.arena:id/username'</msg>
+<status status="PASS" starttime="20210820 17:15:43.149" endtime="20210820 17:15:44.218"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:44.219" level="INFO">QgqppjSjHR</msg>
+<status status="PASS" starttime="20210820 17:15:44.218" endtime="20210820 17:15:44.219"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_input_password}</arg>
+<arg>123456qwe</arg>
+</arguments>
+<msg timestamp="20210820 17:15:44.223" level="INFO">Typing text '123456qwe' into text field 'id=com.sebangsa.arena:id/password'</msg>
+<status status="PASS" starttime="20210820 17:15:44.219" endtime="20210820 17:15:45.791"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_login_app}</arg>
+</arguments>
+<msg timestamp="20210820 17:15:45.795" level="INFO">Clicking element 'id=com.sebangsa.arena:id/button_login'.</msg>
+<status status="PASS" starttime="20210820 17:15:45.792" endtime="20210820 17:15:46.531"></status>
+</kw>
+<status status="PASS" starttime="20210820 17:15:12.426" endtime="20210820 17:15:46.533" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210820 17:15:12.413" endtime="20210820 17:15:46.535"></status>
+</suite>
+<status status="FAIL" starttime="20210820 17:14:25.853" endtime="20210820 17:15:46.538"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="TC01 Register dengan locator &amp; TC02 login">TC01 Register dengan locator &amp; TC02 login</stat>
+<stat pass="0" fail="1" id="s1-s1" name="TC01 Register dengan locator">TC01 Register dengan locator &amp; TC02 login.TC01 Register dengan locator</stat>
+<stat pass="1" fail="0" id="s1-s2" name="TC02 login">TC01 Register dengan locator &amp; TC02 login.TC02 login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

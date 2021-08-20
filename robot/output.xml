@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.7 on win32)" generated="20210820 17:09:31.987" rpa="false">
+<suite id="s1" name="Robot" source="C:\robot">
+<suite id="s1-s1" name="Arena" source="C:\robot\Arena">
+<suite id="s1-s1-s1" name="TC01 Register dengan locator" source="C:\robot\Arena\TC01_Register_dengan_locator.robot">
+<test id="s1-s1-s1-t1" name="register">
+<kw name="define apps" library="sbs">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>alias=Sebangsa</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>autoGrantPermissions=${autoGrantPermissions}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210820 17:10:09.730" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20210820 17:10:09.724" endtime="20210820 17:10:09.730"></status>
+</kw>
+<msg timestamp="20210820 17:10:09.734" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20210820 17:10:09.781" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sebangsa.arena' application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\dennypc\\AppData\\Local\\Android\\sdk\\platform-tools\\adb.exe -P 5037 -s 356101070461948 shell am start -W -n com.sebangsa.arena/com.sebangsa.arena.ui.main.MainActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability
+</msg>
+<status status="FAIL" starttime="20210820 17:09:32.459" endtime="20210820 17:10:09.781"></status>
+</kw>
+<status status="FAIL" starttime="20210820 17:09:32.458" endtime="20210820 17:10:09.782"></status>
+</kw>
+<status status="FAIL" starttime="20210820 17:09:32.456" endtime="20210820 17:10:09.783" critical="yes">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sebangsa.arena' application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\dennypc\\AppData\\Local\\Android\\sdk\\platform-tools\\adb.exe -P 5037 -s 356101070461948 shell am start -W -n com.sebangsa.arena/com.sebangsa.arena.ui.main.MainActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability
+</status>
+</test>
+<status status="FAIL" starttime="20210820 17:09:32.086" endtime="20210820 17:10:09.785"></status>
+</suite>
+<suite id="s1-s1-s2" name="TC02 login" source="C:\robot\Arena\TC02_login.robot">
+<test id="s1-s1-s2-t1" name="login">
+<kw name="define apps" library="sbs">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>alias=Sebangsa</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>autoGrantPermissions=${autoGrantPermissions}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:10:09.818" endtime="20210820 17:10:37.008"></status>
+</kw>
+<status status="PASS" starttime="20210820 17:10:09.816" endtime="20210820 17:10:37.008"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${navigasi_akun}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:10:37.009" endtime="20210820 17:10:37.730"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${navigasi_akun}</arg>
+</arguments>
+<msg timestamp="20210820 17:10:37.735" level="INFO">Clicking element 'id=com.sebangsa.arena:id/navigation_account'.</msg>
+<status status="PASS" starttime="20210820 17:10:37.730" endtime="20210820 17:10:37.940"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20210820 17:10:37.946" level="INFO">Clicking element 'id=com.sebangsa.arena:id/btn_login'.</msg>
+<status status="PASS" starttime="20210820 17:10:37.941" endtime="20210820 17:10:38.769"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${txt_input_username}</arg>
+</arguments>
+<status status="PASS" starttime="20210820 17:10:38.770" endtime="20210820 17:10:39.929"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_input_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210820 17:10:39.936" level="INFO">Typing text '' into text field 'id=com.sebangsa.arena:id/username'</msg>
+<status status="PASS" starttime="20210820 17:10:39.930" endtime="20210820 17:10:41.000"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210820 17:10:41.002" level="INFO"></msg>
+<status status="PASS" starttime="20210820 17:10:41.001" endtime="20210820 17:10:41.002"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txt_input_password}</arg>
+<arg>123456qwe</arg>
+</arguments>
+<msg timestamp="20210820 17:10:41.006" level="INFO">Typing text '123456qwe' into text field 'id=com.sebangsa.arena:id/password'</msg>
+<status status="PASS" starttime="20210820 17:10:41.003" endtime="20210820 17:10:42.458"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${btn_login_app}</arg>
+</arguments>
+<msg timestamp="20210820 17:10:42.462" level="INFO">Clicking element 'id=com.sebangsa.arena:id/button_login'.</msg>
+<status status="PASS" starttime="20210820 17:10:42.458" endtime="20210820 17:10:43.662"></status>
+</kw>
+<status status="PASS" starttime="20210820 17:10:09.814" endtime="20210820 17:10:43.662" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210820 17:10:09.791" endtime="20210820 17:10:43.664"></status>
+</suite>
+<status status="FAIL" starttime="20210820 17:09:32.079" endtime="20210820 17:10:43.668"></status>
+</suite>
+<status status="FAIL" starttime="20210820 17:09:32.033" endtime="20210820 17:10:43.673"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Robot">Robot</stat>
+<stat pass="1" fail="1" id="s1-s1" name="Arena">Robot.Arena</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="TC01 Register dengan locator">Robot.Arena.TC01 Register dengan locator</stat>
+<stat pass="1" fail="0" id="s1-s1-s2" name="TC02 login">Robot.Arena.TC02 login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210820 17:10:09.734" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
